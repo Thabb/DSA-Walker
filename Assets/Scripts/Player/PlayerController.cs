@@ -33,7 +33,7 @@ public class PlayerController : NetworkBehaviour
         Vector2 mousePositionOnScreen = Input.mousePosition;
 
         float angle = AngleBetweenTwoPoints(playerPositionOnScreen, mousePositionOnScreen);
-        transform.rotation = Quaternion.Euler(new Vector3(0f, -angle, 0f));
+        transform.GetChild(1).transform.rotation = Quaternion.Euler(new Vector3(0f, -angle, 0f));
     }
 
     private float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
