@@ -6,19 +6,17 @@ public class SceneMaster : MonoBehaviour
 {
     public GUIElement pauseMenu;
 
-    private List<GUIElement> _openGUIElements = new List<GUIElement>();
+    public List<GUIElement> openGUIElements { get; set; }  = new List<GUIElement>();
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (_openGUIElements.Count != 0)
+            if (openGUIElements.Count != 0)
             {
-                _openGUIElements[_openGUIElements.Count - 1].Hide();
-                _openGUIElements.RemoveAt(_openGUIElements.Count - 1);
+                openGUIElements[openGUIElements.Count - 1].Hide();
             } else
             {
                 pauseMenu.Show();
-                _openGUIElements.Add(pauseMenu);
             }
         }
     }

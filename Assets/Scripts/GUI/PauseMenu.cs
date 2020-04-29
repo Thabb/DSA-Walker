@@ -6,7 +6,7 @@ public class PauseMenu : GUIElement
 {
     public void ResumeButton()
     {
-        Hide();
+        Hide();   
     }
 
     public void ExitButton()
