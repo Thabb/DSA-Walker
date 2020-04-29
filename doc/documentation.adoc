@@ -1,0 +1,14 @@
+= DSA-Walker
+
+:toc:
+
+:numbered:
+
+== Allgemein
+****
+Dies ist ein Programm, das es ermöglichen soll Online Sitzungen von dem Pen & Paper Rollenspiel "Das schwarze Auge"
+umzusetzen. Später soll es ebenso möglich sein alle beliebigen Pen & Paper Rollenspiele mit diesem Programm zu spielen.
+
+Ermöglichen wollen wir dies in der Form eines Mehrspieler Spiels, bei dem jeder Spieler seinen eigenen Charakter
+spielt, während der Spielleiter das Spielfeld und die darauf erscheinenden Ereignisse beliebig kontrollieren kann.
+****
