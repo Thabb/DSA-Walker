@@ -5,8 +5,10 @@ using UnityEngine;
 public class SceneMaster : MonoBehaviour
 {
     public GUIElement pauseMenu;
+    public GUIElement rollDiceMenu;
 
     public List<GUIElement> openGUIElements { get; set; }  = new List<GUIElement>();
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
@@ -18,6 +20,11 @@ public class SceneMaster : MonoBehaviour
             {
                 pauseMenu.Show();
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            rollDiceMenu.Show();
         }
     }
 }
