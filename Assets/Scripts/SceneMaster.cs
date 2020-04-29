@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SceneMaster : MonoBehaviour
 {
-    public GameObject pauseMenu;
+    public GUIElement pauseMenu;
 
     private List<GUIElement> _openGUIElements = new List<GUIElement>();
     void Update()
@@ -13,12 +13,12 @@ public class SceneMaster : MonoBehaviour
         {
             if (_openGUIElements.Count != 0)
             {
-                _openGUIElements[_openGUIElements.Count - 1].gameObject.SetActive(false);
+                _openGUIElements[_openGUIElements.Count - 1].Hide();
                 _openGUIElements.RemoveAt(_openGUIElements.Count - 1);
             } else
             {
-                pauseMenu.SetActive(true);
-                _openGUIElements.Add(pauseMenu.GetComponent<GUIElement>());
+                pauseMenu.Show();
+                _openGUIElements.Add(pauseMenu);
             }
         }
     }

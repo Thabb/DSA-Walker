@@ -6,7 +6,7 @@ public class PauseMenu : GUIElement
 {
     public void ResumeButton()
     {
-        gameObject.SetActive(false);
+        Hide();
     }
 
     public void ExitButton()
