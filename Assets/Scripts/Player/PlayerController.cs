@@ -24,7 +24,7 @@ public class PlayerController : NetworkBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        _rigidbody.velocity = new Vector3(horizontal, 0f, vertical) * Time.deltaTime * 100;
+        _rigidbody.velocity = new Vector3(horizontal, 0f, vertical);
     }
 
     private void Rotation()
