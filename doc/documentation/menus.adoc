@@ -1,0 +1,44 @@
+== Menüs
+
+=== Entwicklerinformationen
+
+==== Hinzufügen eines neuen Menüs
+****
+Alle Menüobjekte erben von der Klasse `GUIElement`. Diese verwaltet die grundlegenden Funktionen eines Menüs.
+Außerdem werden alle Menüs im `SceneMaster` verwaltet. Dieser sorgt dafür, dass Menüs übereinander stapelbar sind und
+eventuell untere Menüs ausgeblendet werden.
+
+Um ein neues Menü einzufügen, muss dieses zunächst als neues Gameobjekt an das `GUI` Gameobjekt angehangen werden.
+Darüber hinaus muss ihm ein - von `GUIElement` erbendes Skript angehangen werden. Innerhalb dieses Skripts muss der
+`SceneMaster` referenziert werden.
+Das neue Menü muss darüber hinaus im `SceneMaster` Skript als neue Referenz hinzugefügt werden. Außerdem muss dort
+innerhalb der Update Methode eine neue If-Condition hinzu gefügt werden, die das Öffnen dieses spezifischen Menüs
+übernimmt.
+
+Darüber hinaus ist - bis auf die eigentlich Funktionalität des Menüs - nichts zu beachten.
+****
+
+==== Löschen eines Menüs
+****
+Um ein Menü zu löschen müssen alle bereits existierenden Referenzen darauf entfernt werden. Diese sind:
+. Das Gameobject selbst. Dieses hängt normalerweise als Child am `GUI`-Gameobject.
+. Das dazugehörige Skript (normalerweise) im Ordner `Scripts`-->`GUI`.
+. Die Referenz vom `SceneMaster`-Gameobject auf das Menü sowie die If-Condition, die das Öffnen des Menüs übernommen hat.
+****
+
+=== Existierende Menüs
+
+==== Pause Menü
+****
+Ein Menü, dass mittels des Escape Knopfes geöffnet wird. In ihm kann das Spiel beendet werden sowie andere Menüs
+geöffnet werden. Ebenso wird es im weiteren Verlauf der Entwicklung möglich sein an dieser Stelle mehrere grundlegende
+Einstellungen vorzunehmen.
+****
+
+==== Würfel Menü
+****
+Bisher ist dies nur ein Platzhalter.
+
+In Zukunft soll es möglich sein, hier eine beliebige Kombination an Würfel zu rollen.
+Das Ergebnis soll dann am Bildschirmrand angezeigt werden.
+****

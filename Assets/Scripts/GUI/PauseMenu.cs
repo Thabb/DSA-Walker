@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu : GUIElement
 {
-    public GameObject pauseMenu;
-
     public void ResumeButton()
     {
-        pauseMenu.SetActive(false);
+        Hide();   
     }
 
     public void ExitButton()
